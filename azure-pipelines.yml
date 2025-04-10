@@ -13,10 +13,10 @@ steps:
     packageType: 'sdk'
     version: '8.0.x'
 
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build mari_quiz4_dotnet/mari_quiz4_dotnet.csproj --configuration $(buildConfiguration)
   displayName: 'Build project'
 
-- script: dotnet publish -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)
+- script: dotnet publish mari_quiz4_dotnet/mari_quiz4_dotnet.csproj -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)
   displayName: 'Publish project'
 
 - task: PublishBuildArtifacts@1
